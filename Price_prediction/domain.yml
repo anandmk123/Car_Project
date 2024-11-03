@@ -1,0 +1,174 @@
+version: "3.1"
+intents:
+  - affirm
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - inform
+  - predict_car_price
+  - stop
+  - ask_shap
+actions:
+  - utter_slots_values
+  - utter_greet
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_brand
+  - utter_ask_model
+  - utter_ask_km_driven
+  - utter_ask_mileage
+  - utter_ask_fuel_type
+  - utter_ask_transmission_type
+  - utter_ask_engine
+  - utter_ask_max_power
+  - utter_ask_seats
+  - utter_ask_year_of_manufacture
+  - action_clear_slots
+  - action_predict_car_price
+  - utter_please_rephrase
+  - utter_default
+  - action_max_contribution
+  - validate_car_details_form
+entities:
+  - brand
+  - model
+  - mileage
+  - km_driven
+  - fuel_type
+  - transmission_type
+  - engine
+  - max_power
+  - seats
+  - year_of_manufacture
+slots:
+  brand:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: brand
+        conditions:
+          - active_loop: car_details_form
+  model:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: model
+        conditions:
+          - active_loop: car_details_form
+  km_driven:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: km_driven
+        conditions:
+          - active_loop: car_details_form
+  mileage:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: mileage
+        conditions:
+          - active_loop: car_details_form
+  fuel_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: fuel_type
+        conditions:
+          - active_loop: car_details_form
+  transmission_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: transmission_type
+        conditions:
+          - active_loop: car_details_form
+  engine:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: engine
+        conditions:
+          - active_loop: car_details_form
+  max_power:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: max_power
+        conditions:
+          - active_loop: car_details_form
+  seats:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: seats
+        conditions:
+          - active_loop: car_details_form
+  year_of_manufacture:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: year_of_manufacture
+        conditions:
+          - active_loop: car_details_form
+forms:
+  car_details_form:
+    required_slots:
+      - brand
+      - model
+      - km_driven
+      - mileage
+      - fuel_type
+      - transmission_type
+      - engine
+      - max_power
+      - seats
+      - year_of_manufacture
+responses:
+  utter_greet:
+    - text: Hey there! How can I assist you today?
+  utter_goodbye:
+    - text: Alright, take care! If you need anything else, just say "Hi" to start over.
+  utter_iamabot:
+    - text: Yep, I’m a virtual assistant powered by Rasa, here to predict the price of your car!
+  utter_ask_brand:
+    - text: Great! Let's start with the basics. What’s the brand of your car?
+  utter_ask_model:
+    - text: Got it. And what’s the model?
+  utter_ask_km_driven:
+    - text: How many kilometers have you driven it so far?
+  utter_ask_mileage:
+    - text: Thanks! What’s the mileage?
+  utter_ask_fuel_type:
+    - text: And what’s the fuel type? Petrol, diesel, or something else?
+  utter_ask_transmission_type:
+    - text: Is it a manual or automatic transmission?
+  utter_ask_engine:
+    - text: Can you tell me the engine capacity? (e.g., 1500cc)
+  utter_ask_max_power:
+    - text: What’s the maximum power in bhp?
+  utter_ask_seats:
+    - text: How many seats are there in your car?
+  utter_ask_year_of_manufacture:
+    - text: Finally, what year was your car manufactured?
+  utter_slots_values:
+    - text: "Let’s confirm: your car is a {brand} {model}, with {km_driven} km driven, {mileage} mileage, {fuel_type} fuel, {transmission_type} transmission, {engine} engine capacity, {max_power} bhp power, {seats} seats, and was manufactured in {year_of_manufacture}. Is everything correct?"
+  utter_please_rephrase:
+    - text: Hmm, I didn’t quite catch that. Could you rephrase it for me?
+  utter_default:
+    - text: Oops, I missed that! Could you say it another way? 😊
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,517 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - ok
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - incorrect
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: predict_car_price
+    examples: |
+      - I want to sell my car
+      - Can you predict my car's price?
+      - I'd like to know my car's value
+      - I want to check my car's price
+      - Can you estimate my car price?
+      - Help me find out my car's resale value
+      - How much can I sell my car for?
+      - What's the estimated price for my car?
+      - Can you tell me the worth of my car?
+      - I need a car price prediction
+      - What's my car’s market value?
+      - I’d like to get an estimate for my car
+      - How much is my car worth now?
+      - Show me the selling price for my car
+      - I want to know the current value of my vehicle
+      - Could you calculate my car's price?
+      - Help me with my car's valuation
+      - Tell me the resale price of my car
+      - Can you give me an idea of my car's worth?
+      - sell my car
+      - sell the car
+      - predcit my car price
+      - predict_car_pris
+      - need to know my car price
+  - intent: inform
+    examples: |
+      - I want to check the price for my [Hyundai](brand) [Creta](model)
+      - My car is a [Maruti Suzuki](brand) [Swift](model)
+      - I have a [Tata](brand) [Nexon](model)
+      - Can you tell me the value of my [Mahindra](brand) [Thar](model)?
+      - The brand is [Renault](brand) and the model is [Kwid](model)
+      - I drive a [Ford](brand) [Ecosport](model)
+      - My car is a [Toyota](brand) [Fortuner](model)
+      - It's a [Kia](brand) [Seltos](model)
+      - My vehicle is a [Volkswagen](brand) [Taigun](model)
+      - I own a [Skoda](brand) [Octavia](model)
+      - It's a [MG](brand) [Hector](model)
+      - I want to sell my [Honda](brand) [City](model)
+      - What's the resale value of my [Nissan](brand) [Duster](model)?
+      - My car model is [Harrier](model) from [Tata](brand)
+      - It's a [BMW](brand) [X5](model)
+      - I have a [Mercedes](brand) [C-Class](model)
+      - Please check the price of my [Audi](brand) [Q7](model)
+      - The brand is [Hyundai](brand) and model is [Verna](model)
+      - The brand is [Ford](brand) and model is [EcoSport](model)
+      - The brand is [Honda](brand) and model is [Amaze](model)
+      - The brand is [Maruti](brand) and model is [Baleno](model)
+      - The brand is [Renault](brand) and model is [Triber](model)
+      - The brand is [Volkswagen](brand) and model is [Vento](model)
+      - The brand is [Kia](brand) and model is [Sonet](model)
+      - [Maruti](brand)
+      - [Alto](model)
+      - [Hyundai](brand)
+      - [Swift](model)
+      - [Tata](brand)
+      - [Nexon](model)
+      - [Mahindra](brand)
+      - [Thar](model)
+      - [Ford](brand)
+      - [EcoSport](model)
+      - [Toyota](brand)
+      - [Camry](model)
+      - [Kia](brand)
+      - [Seltos](model)
+      - [Honda](brand)
+      - [Civic](model)
+      - [Chevrolet](brand)
+      - [Volkswagen](brand)
+      - [Polo](model)
+      - [i20](model)
+      - [Audi](brand)
+      - My car has driven [3000](km_driven) kilometers.
+      - It has run [5000](km_driven) km.
+      - The distance is [2500](km_driven) kilometers.
+      - My car has [2025](km_driven) km driven.
+      - It's driven [10000](km_driven) kilometers.
+      - I have driven [4000](km_driven) kilometers.
+      - The mileage is [7500](km_driven) km.
+      - [3000](km_driven) km
+      - [5000](km_driven) km
+      - My car has [8000](km_driven) kilometers on it.
+      - It’s been driven for about [5500](km_driven) km.
+      - The car has traveled [6500](km_driven) kilometers.
+      - There are [7000](km_driven) km on the odometer.
+      - It’s run [30000](km_driven) km so far.
+      - The total distance driven is [15000](km_driven) km.
+      - It has covered [12000](km_driven) kilometers till now.
+      - I've driven my car for [18000](km_driven) kilometers.
+      - The car has done around [40000](km_driven) km.
+      - It has already gone [45000](km_driven) kilometers.
+      - My car’s total km driven is [22000](km_driven).
+      - The car clocked [9000](km_driven) km in total.
+      - It currently shows [17000](km_driven) km driven.
+      - It's reached [50000](km_driven) kilometers so far.
+      - My car's odometer reads [33000](km_driven) km.
+      - It has a total of [27000](km_driven) kilometers on it.
+      - Driven around [23000](km_driven) kilometers.
+      - It’s traveled [42000](km_driven) km.
+      - I have already driven it for [35000](km_driven) kilometers.
+      - Showing a total of [31000](km_driven) km.
+      - Odometer reading is [60000](km_driven) kilometers.
+      - The distance covered is [25000](km_driven) km.
+      - It has driven roughly [29000](km_driven) kilometers.
+      - Logged about [48000](km_driven) km.
+      - I think it’s done around [39000](km_driven) kilometers.
+      - The journey so far is [27000](km_driven) km.
+      - the brand is [Tata](brand)
+      - Model is [Thar](model)
+      - [2500](km_driven) km
+      - [15](mileage) km/l
+      - [20](mileage) km/l
+      - [25](mileage) km/l
+      - mileage is [18](mileage) km/l
+      - the mileage is around [15](mileage) km/l
+      - I think it has a mileage of [22](mileage) km/l
+      - about [19](mileage) km/l
+      - it's [16](mileage) km/l
+      - around [13](mileage) km/l
+      - approximately [23](mileage) km/l
+      - with a mileage of [27](mileage) km/l
+      - [14](mileage) km/l is the mileage
+      - my car gives [18](mileage) km/l
+      - close to [20](mileage) km/l
+      - roughly [17](mileage) km/l
+      - it's about [21](mileage) km/l
+      - [26](mileage) km/l is its mileage
+      - gives around [19](mileage) km/l
+      - delivers [28](mileage) km/l
+      - the mileage is approximately [24](mileage) km/l
+      - it has an average mileage of [25](mileage) km/l
+      - I think the mileage is around [18](mileage) km/l
+      - gives a mileage close to [16](mileage) km/l
+      - estimated mileage is [20](mileage) km/l
+      - I believe the mileage is [22](mileage) km/l
+      - should have a mileage of [15](mileage) km/l
+      - recorded mileage is [17](mileage) km/l
+      - mileage reads as [19](mileage) km/l
+      - the car's mileage is [27](mileage) km/l
+      - reported mileage of [26](mileage) km/l
+      - its mileage hovers around [14](mileage) km/l
+      - the expected mileage is about [23](mileage) km/l
+      - typically, the mileage is [21](mileage) km/l
+      - has a mileage rating of [18](mileage) km/l
+      - the listed mileage is [29](mileage) km/l
+      - projected mileage should be [13](mileage) km/l
+      - an approximate mileage of [25](mileage) km/l
+      - my car's mileage is around [20](mileage) km/l
+      - with an average mileage of [19](mileage) km/l
+      - My car runs on [petrol](fuel_type)
+      - It's a [diesel](fuel_type) car
+      - The fuel type is [electric](fuel_type)
+      - I drive a [petrol](fuel_type) vehicle
+      - The car uses [diesel](fuel_type) as fuel
+      - My vehicle is [electric](fuel_type)
+      - It's powered by [petrol](fuel_type)
+      - The fuel type of my car is [diesel](fuel_type)
+      - I have an [electric](fuel_type) car
+      - The engine runs on [petrol](fuel_type)
+      - I prefer [diesel](fuel_type) for better mileage
+      - This car is an [electric](fuel_type) model
+      - [petrol](fuel_type)
+      - [diesel](fuel_type)
+      - [electric](fuel_type)
+      - The car has a [manual](transmission_type) transmission
+      - It features an [automatic](transmission_type) gearbox
+      - My vehicle is [manual](transmission_type)
+      - I drive an [automatic](transmission_type) car
+      - The transmission type is [manual](transmission_type)
+      - This car uses [automatic](transmission_type)
+      - I prefer a [manual](transmission_type) transmission
+      - My car has [automatic](transmission_type) transmission
+      - It is a [manual](transmission_type) model
+      - The vehicle is equipped with [automatic](transmission_type)
+      - [manual](transmission_type)
+      - [automatic](transmission_type)
+      - The engine is [1200](engine) cc
+      - My car has an engine capacity of [1500](engine) cc
+      - It's equipped with a [1800](engine) cc
+      - The vehicle features a [2000](engine) cc
+      - I have a [1000](engine) cc
+      - The engine size is [2500](engine) cc
+      - This car comes with a [3000](engine) cc
+      - It has a [1600](engine) cc
+      - Engine capacity: [1400](engine) cc
+      - The car has an engine of [2200](engine) cc
+      - The engine is [1200](engine)cc
+      - My car has an engine capacity of [1500](engine)cc
+      - It's equipped with a [1800](engine) cc
+      - The vehicle features a [2000](engine) cc
+      - I have a [1000](engine) cc
+      - The engine size is [2500](engine) cc
+      - This car comes with a [3000](engine) cc
+      - It has a [1600](engine) cc
+      - Engine capacity: [1400](engine) cc
+      - The car has an engine of [2200](engine) cc
+      - [1200](engine) cc
+      - [1600](engine) cc
+      - The max power is [100](max_power) bhp
+      - My car has a max power of [150](max_power) bhp
+      - It's equipped with a [200](max_power) bhp engine
+      - The vehicle features a [250](max_power) bhp
+      - I have a max power of [180](max_power) bhp
+      - The max power is [300](max_power) bhp
+      - This car comes with a max power of [350](max_power) bhp
+      - It has a max power of [220](max_power) bhp
+      - Engine power: [175](max_power) bhp
+      - My car's max power is [134](max_power) bhp
+      - The engine delivers [23](max_power) bhp
+      - Max power: [99](max_power) bhp
+      - Power output: [89](max_power) bhp
+      - [100](max_power) bhp
+      - [150](max_power) bhp
+      - My car has [2](seats) seats.
+      - It accommodates [5](seats) seats.
+      - This vehicle offers [4](seats) seats.
+      - Max seating capacity is [7](seats).
+      - There are [6](seats) available seats.
+      - I need a car with [8](seats) seats.
+      - It fits [3](seats) seats comfortably.
+      - The car comes with [9](seats) seats.
+      - This model supports [1](seats) seat.
+      - The sedan has [4](seats) seats.
+      - My SUV provides [5](seats) seats.
+      - The hatchback features [6](seats) seats.
+      - [5](seats) seats
+      - [6](seats) seats.
+      - My car was manufactured in [2020](year_of_manufacture) 
+      - It's a [2015](year_of_manufacture) year model
+      - The vehicle's year of manufacture is [2018](year_of_manufacture)
+      - This car was made in the year [2010](year_of_manufacture)
+      - I have a car from [2021](year_of_manufacture)
+      - The model year is [2019](year_of_manufacture)
+      - It was manufactured in [2005](year_of_manufacture)
+      - My vehicle is from the year [2012](year_of_manufacture)
+      - The production year is [2023](year_of_manufacture)
+      - This car's year of manufacture is [2000](year_of_manufacture)
+      - The year of my car is [2016](year_of_manufacture)
+      - I bought it in the year [2014](year_of_manufacture)
+      - It's a vintage car from [1998](year_of_manufacture)
+      - The registration year is [2001](year_of_manufacture)
+      - [2015](year_of_manufacture) year
+      - [2017](year_of_manufacture) year
+
+  - intent: stop
+    examples: |
+      - stop
+      - exit
+      - quit
+      - cancel
+      - I'm done
+      - I want to stop
+      - please stop
+      - end the conversation
+      - no more questions
+      - that's all
+
+  - intent: ask_shap
+    examples: |
+      - max contribution
+      - most impact
+      - top feature
+      - which feature affects the price the most?
+      - what contributes the most to the price?
+      - which car feature has the highest impact?
+      - tell me the most significant factor in pricing
+      - what feature is most important for price prediction?
+      - which attribute affects the price the most?
+      - what influences the price the most?
+      - what are the top contributing features?
+      - show me the features that impact the price
+      - can you tell me which feature has the most weight?
+      - what's the most influential factor in determining the price?
+      - how do the car features affect the price?
+      - which attributes should I focus on for pricing?
+      - which aspects drive the car's price?
+      - what matters most in car pricing?
+      - what are the key features affecting the price?
+      - help me understand the pricing factors.
+      - what contributes most to the car's value?
+      - which car specs should I consider for pricing?
+
+  - regex: km_driven
+    examples: |
+      - \b\d{4,6}\b(?=\s*(km|kilometers)\b)
+  - regex: mileage
+    examples: |
+      - \b\d{1,2}\b(?=\s*(km\/l|km per liter)\b)
+  - regex: engine
+    examples: |
+      - \b(\d{3,4})\s?cc\b
+  - regex: max_power
+    examples: |
+      - \b\d{2,3}\s*(bhp)\b
+  - regex: seats
+    examples: |
+      - \b[1-9]\s*seats\b
+  - regex: year_of_manufacture
+    examples: |
+      - \b(19[0-9]{2}|20[0-2][0-3])\b\s*year\b
+
+  - lookup: brand
+    examples: |
+      - Maruti
+      - Hyundai
+      - Ford
+      - Renault
+      - Mini
+      - Mercedes-Benz
+      - Toyota
+      - Volkswagen
+      - Honda
+      - Mahindra
+      - Datsun
+      - Tata
+      - Kia
+      - BMW
+      - Audi
+      - Land Rover
+      - Jaguar
+      - MG
+      - Isuzu
+      - Porsche
+      - Skoda
+      - Volvo
+      - Lexus
+      - Jeep
+      - Maserati
+      - Bentley
+      - Nissan
+      - ISUZU
+      - Ferrari
+      - Mercedes-AMG
+      - Rolls-Royce
+      - Force
+  - lookup: model
+    examples: |
+      - Alto
+      - Grand
+      - i20
+      - Ecosport
+      - Wagon R
+      - i10
+      - Venue
+      - Swift
+      - Verna
+      - Duster
+      - Cooper
+      - Ciaz
+      - C-Class
+      - Innova
+      - Baleno
+      - Swift Dzire
+      - Vento
+      - Creta
+      - City
+      - Bolero
+      - Fortuner
+      - KWID
+      - Amaze
+      - Santro
+      - XUV500
+      - KUV100
+      - Ignis
+      - RediGO
+      - Scorpio
+      - Marazzo
+      - Aspire
+      - Figo
+      - Vitara
+      - Tiago
+      - Polo
+      - Seltos
+      - Celerio
+      - GO
+      - CR-V
+      - Endeavour
+      - KUV
+      - Jazz
+      - A4
+      - Tigor
+      - Ertiga
+      - Safari
+      - Thar
+      - Hexa
+      - Rover
+      - Eeco
+      - A6
+      - E-Class
+      - Q7
+      - Z4
+      - XF
+      - X5
+      - Hector
+      - Civic
+      - D-Max
+      - Cayenne
+      - X1
+      - Rapid
+      - Freestyle
+      - Superb
+      - Nexon
+      - XUV300
+      - Dzire VXI
+      - S90
+      - WR-V
+      - XL6
+      - Triber
+      - ES
+      - Wrangler
+      - Camry
+      - Elantra
+      - Yaris
+      - GL-Class
+      - S-Presso
+      - Dzire LXI
+      - Aura
+      - XC
+      - Ghibli
+      - Continental
+      - CR
+      - Kicks
+      - S-Class
+      - Tucson
+      - Harrier
+      - X3
+      - Octavia
+      - Compass
+      - CLS
+      - redi-GO
+      - Glanza
+      - Macan
+      - X4
+      - Dzire ZXI
+      - XC90
+      - F-PACE
+      - A8
+      - MUX
+      - GTC4Lusso
+      - GLS
+      - X-Trail
+      - XE
+      - XC60
+      - Panamera
+      - Alturas
+      - Altroz
+      - NX
+      - Carnival
+      - C
+      - RX
+      - Ghost
+      - Quattroporte
+      - Gurkha
+  - lookup: transmission_type
+    examples: |
+      - manual
+      - automatic
+  - lookup: fuel_type
+    examples: |
+      - petrol
+      - diesel
+      - electric

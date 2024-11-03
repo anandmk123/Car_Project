@@ -1,0 +1,10 @@
+[
+  {
+    "name": "brand",
+    "pattern": "(\\bToyota\\b|\\bHonda\\b|\\bFord\\b|\\bBMW\\b|\\bChevrolet\\b|\\bMercedes\\b|\\bAudi\\b|\\bTesla\\b|\\bHyundai\\b|\\bNissan\\b|\\bTata\\b|\\bMahindra\\b|\\bMaruti\\ Suzuki\\b|\\bKia\\b|\\bJaguar\\b|\\bLand\\ Rover\\b|\\bPorsche\\b|\\bLexus\\b|\\bDodge\\b|\\bJeep\\b|\\bFerrari\\b|\\bMG\\b|\\bRenault\\b|\\bSkoda\\b|\\bVolkswagen\\b|\\bDatsun\\b|\\bIsuzu\\b|\\bFiat\\b)"
+  },
+  {
+    "name": "model",
+    "pattern": "(\\bCivic\\b|\\bMustang\\b|\\bModel\\ S\\b|\\bAccord\\b|\\bElantra\\b|\\bCX\\-5\\b|\\bGolf\\b|\\bOutback\\b|\\bSportage\\b|\\bXF\\b|\\b911\\b|\\bES\\ 350\\b|\\bCharger\\b|\\bWrangler\\b|\\b488\\b|\\bAlto\\b|\\bSwift\\b|\\bBaleno\\b|\\bDzire\\b|\\bErtiga\\b|\\bNexon\\b|\\bHarrier\\b|\\bSafari\\b|\\bScorpio\\b|\\bXUV500\\b|\\bThar\\b|\\bHector\\b|\\bSeltos\\b|\\bCreta\\b|\\bVenue\\b|\\bSantro\\b|\\bDuster\\b|\\bKwid\\b|\\bKiger\\b|\\bOctavia\\b|\\bRapid\\b|\\bTaigun\\b|\\bCompass\\b|\\bBolero\\b|\\bFortuner\\b|\\bInnova\\ Crysta\\b|\\bAmaze\\b|\\bCity\\b|\\bJazz\\b|\\bVenue\\b|\\bEcosport\\b|\\bi20\\b)"
+  }
+]

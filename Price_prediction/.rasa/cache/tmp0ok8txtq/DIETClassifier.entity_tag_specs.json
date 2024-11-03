@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-brand",
+      "2": "I-brand",
+      "3": "L-brand",
+      "4": "U-brand",
+      "5": "B-km_driven",
+      "6": "I-km_driven",
+      "7": "L-km_driven",
+      "8": "U-km_driven",
+      "9": "B-model",
+      "10": "I-model",
+      "11": "L-model",
+      "12": "U-model",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-brand": 1,
+      "I-brand": 2,
+      "L-brand": 3,
+      "U-brand": 4,
+      "B-km_driven": 5,
+      "I-km_driven": 6,
+      "L-km_driven": 7,
+      "U-km_driven": 8,
+      "B-model": 9,
+      "I-model": 10,
+      "L-model": 11,
+      "U-model": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
