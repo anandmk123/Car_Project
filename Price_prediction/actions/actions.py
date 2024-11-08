@@ -15,38 +15,39 @@ class ValidateCarDetailsForm(FormValidationAction):
         return "validate_car_details_form"
     
     def validate_brand(
-        self,
-        slot_value: Any,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> Dict[Text, Any]:
-        """Validate `brand` value with case-insensitive fuzzy matching and format the output correctly."""
+            self,
+            slot_value: Any,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: DomainDict,
+        ) -> Dict[Text, Any]:
+            """Validate `brand` value with case-insensitive fuzzy matching and format the output correctly."""
 
-        ALLOWED_BRANDS = [
-            'maruti', 'hyundai', 'ford', 'renault', 'mini', 'mercedes-benz', 
-            'toyota', 'volkswagen', 'honda', 'mahindra', 'datsun', 'tata', 
-            'kia', 'bmw', 'audi', 'land rover', 'jaguar', 'mg', 'isuzu', 
-            'porsche', 'skoda', 'volvo', 'lexus', 'jeep', 'maserati', 
-            'bentley', 'nissan', 'ferrari', 'mercedes-amg', 
-            'rolls-royce', 'force'
-        ]
+            ALLOWED_BRANDS = [
+                'maruti', 'hyundai', 'ford', 'renault', 'mini', 'mercedes-benz', 
+                'toyota', 'volkswagen', 'honda', 'mahindra', 'datsun', 'tata', 
+                'kia', 'bmw', 'audi', 'land rover', 'jaguar', 'mg', 'isuzu', 
+                'porsche', 'skoda', 'volvo', 'lexus', 'jeep', 'maserati', 
+                'bentley', 'nissan', 'ferrari', 'mercedes-amg', 
+                'rolls-royce', 'force'
+            ]
 
-        # Convert user input to lowercase for matching
-        slot_value_lower = slot_value.lower()
+            # Convert user input to lowercase for case-insensitive matching
+            slot_value_lower = slot_value.lower()
 
-        # Perform fuzzy matching
-        match, score = process.extractOne(slot_value_lower, ALLOWED_BRANDS, score_cutoff=80)
+            # Perform fuzzy matching
+            result = process.extractOne(slot_value_lower, ALLOWED_BRANDS, score_cutoff=80)
 
-        if match:
-            # Format the matched brand with proper capitalization
-            formatted_brand = match.capitalize() if ' ' not in match else ' '.join(word.capitalize() for word in match.split())
-            
-            dispatcher.utter_message(text=f"Great! You have a {formatted_brand} car.")
-            return {"brand": formatted_brand}
-        else:
-            dispatcher.utter_message(text="Sorry, I didn't recognize that brand. Please try again.")
-            return {"brand": None}
+            if result:  # Check if a match was found
+                match, score = result
+                # Format the matched brand with proper capitalization
+                formatted_brand = match.capitalize() if ' ' not in match else ' '.join(word.capitalize() for word in match.split())
+                
+                dispatcher.utter_message(text=f"Great! You have a {formatted_brand} car.")
+                return {"brand": formatted_brand}
+            else:
+                dispatcher.utter_message(text="Sorry, I didn't recognize that brand. Please try again.")
+                return {"brand": None}
 
     def validate_model(
         self,
@@ -76,9 +77,10 @@ class ValidateCarDetailsForm(FormValidationAction):
         slot_value_lower = slot_value.lower()
 
         # Find the closest match with a threshold of 80% similarity
-        match, score = process.extractOne(slot_value_lower, ALLOWED_MODELS, score_cutoff=80)
+        result = process.extractOne(slot_value_lower, ALLOWED_MODELS, score_cutoff=80)
 
-        if match:
+        if result:  # Check if a match was found
+            match, score = result
             # Format the match to title case (First letter capital, rest lowercase)
             formatted_match = match.capitalize()
             dispatcher.utter_message(text=f"Nice! Your car model is {formatted_match}.")
@@ -86,7 +88,6 @@ class ValidateCarDetailsForm(FormValidationAction):
         else:
             dispatcher.utter_message(text="Sorry, I didn't recognize that model. Please try again.")
             return {"model": None}
-            
 
     def validate_km_driven(
         self,
@@ -353,7 +354,7 @@ class ActionPredictCarPrice(Action):
             price = price_data.get('predicted_price', 'Not available')  # Adjust key as necessary
 
             # Send the price back to the user
-            dispatcher.utter_message(text=f"The predicted price of the car is: {price}")
+            dispatcher.utter_message(text=f"The predicted price of the car is: {price:.2f}")
 
         except requests.exceptions.RequestException as e:
             dispatcher.utter_message(text="Sorry, I couldn't fetch the price. Please try again later.")

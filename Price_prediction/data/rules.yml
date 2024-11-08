@@ -23,7 +23,7 @@ rules:
 
   - rule: Activate car details form
     steps:
-      - intent: predict_car_price
+      - intent: inform
       - action: car_details_form
       - active_loop: car_details_form
 

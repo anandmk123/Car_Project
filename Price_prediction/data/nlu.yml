@@ -15,6 +15,7 @@ nlu:
       - goodmorning
       - goodevening
       - good afternoon
+
   - intent: goodbye
     examples: |
       - cu
@@ -28,6 +29,7 @@ nlu:
       - bye bye
       - see you later
       - ok
+
   - intent: affirm
     examples: |
       - yes
@@ -36,6 +38,7 @@ nlu:
       - of course
       - that sounds good
       - correct
+
   - intent: deny
     examples: |
       - no
@@ -46,38 +49,41 @@ nlu:
       - no way
       - not really
       - incorrect
+
   - intent: bot_challenge
     examples: |
       - are you a bot?
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
-  - intent: predict_car_price
-    examples: |
-      - I want to sell my car
-      - Can you predict my car's price?
-      - I'd like to know my car's value
-      - I want to check my car's price
-      - Can you estimate my car price?
-      - Help me find out my car's resale value
-      - How much can I sell my car for?
-      - What's the estimated price for my car?
-      - Can you tell me the worth of my car?
-      - I need a car price prediction
-      - What's my car’s market value?
-      - I’d like to get an estimate for my car
-      - How much is my car worth now?
-      - Show me the selling price for my car
-      - I want to know the current value of my vehicle
-      - Could you calculate my car's price?
-      - Help me with my car's valuation
-      - Tell me the resale price of my car
-      - Can you give me an idea of my car's worth?
-      - sell my car
-      - sell the car
-      - predcit my car price
-      - predict_car_pris
-      - need to know my car price
+
+  # - intent: predict_car_price
+  #   examples: |
+  #     - I want to sell my car
+  #     - Can you predict my car's price?
+  #     - I'd like to know my car's value
+  #     - I want to check my car's price
+  #     - Can you estimate my car price?
+  #     - Help me find out my car's resale value
+  #     - How much can I sell my car for?
+  #     - What's the estimated price for my car?
+  #     - Can you tell me the worth of my car?
+  #     - I need a car price prediction
+  #     - What's my car’s market value?
+  #     - I’d like to get an estimate for my car
+  #     - How much is my car worth now?
+  #     - Show me the selling price for my car
+  #     - I want to know the current value of my vehicle
+  #     - Could you calculate my car's price?
+  #     - Help me with my car's valuation
+  #     - Tell me the resale price of my car
+  #     - Can you give me an idea of my car's worth?
+  #     - sell my car
+  #     - sell the car
+  #     - predcit my car price
+  #     - predict_car_pris
+  #     - need to know my car price
+
   - intent: inform
     examples: |
       - I want to check the price for my [Hyundai](brand) [Creta](model)
@@ -239,8 +245,6 @@ nlu:
       - It has a [1600](engine) cc
       - Engine capacity: [1400](engine) cc
       - The car has an engine of [2200](engine) cc
-      - The engine is [1200](engine)cc
-      - My car has an engine capacity of [1500](engine)cc
       - It's equipped with a [1800](engine) cc
       - The vehicle features a [2000](engine) cc
       - I have a [1000](engine) cc
@@ -296,6 +300,52 @@ nlu:
       - The registration year is [2001](year_of_manufacture)
       - [2015](year_of_manufacture) year
       - [2017](year_of_manufacture) year
+      - my car is a [toyota](brand) [fortuner](model) from [2016](year_of_manufacture)
+      - I own a [honda](brand) [civic](model) with [30000](kms_driven) kilometers on it
+      - it's a [diesel](fuel_type) [audi](brand) [a4](model) with [150](max_power) bhp
+      - my [ford](brand) [mustang](model) is [2020](year_of_manufacture) model
+      - it has [7](seats) seats and [19.7](mileage) kmpl mileage
+      - I have a [toyota](brand) [corolla](model) that runs on [petrol](fuel_type)
+      - I want to sell a [toyota](brand) [fortuner](model)
+      - I'm looking to buy a [benz](brand) [sclass](model)
+      - I have a [honda](brand) [accord](model) for sale
+      - I want to purchase a [ford](brand) [mustang](model)
+      - I'm interested in selling my [audi](brand) [a4](model)
+      - I want to buy a [honda](brand) [civic](model) that has been driven for [30000](kms_driven) kilometers
+      - I would like to sell a [toyota](brand) [corolla](model) with [5](seats) seats
+      - I'm looking for a [diesel](fuel_type) [hyundai](brand) [elantra](model)
+      - I want to sell my [toyota](brand) [fortuner](model) which has [100](max_power) bhp
+      - I'm interested in a [2021](year_of_manufacture) [honda](brand) [accord](model) with [2000](engine) cc
+      - I want to buy a car with [7](seats) seats and [19.7](mileage) kmpl
+      - I'm looking to sell my [audi](brand) [q5](model) which has been driven [20000](kms_driven) kilometers
+      - I want to buy a [mercedes](brand) [gle](model) that runs on [petrol](fuel_type)
+      - I have a [toyota](brand) [camry](model) that I'm selling, it has [1800](engine) cc
+      - I want to buy a [bmw](brand) [x5](model) with [150](max_power) bhp
+      - I would like to sell a [ford](brand) [focus](model) that has [2018](year_of_manufacture) model year
+      - I want to sell my car
+      - Can you predict my car's price?
+      - I'd like to know my car's value
+      - I want to check my car's price
+      - Can you estimate my car price?
+      - Help me find out my car's resale value
+      - How much can I sell my car for?
+      - What's the estimated price for my car?
+      - Can you tell me the worth of my car?
+      - I need a car price prediction
+      - What's my car’s market value?
+      - I’d like to get an estimate for my car
+      - How much is my car worth now?
+      - Show me the selling price for my car
+      - I want to know the current value of my vehicle
+      - Could you calculate my car's price?
+      - Help me with my car's valuation
+      - Tell me the resale price of my car
+      - Can you give me an idea of my car's worth?
+      - sell my car
+      - sell the car
+      - predcit my car price
+      - predict_car_pris
+      - need to know my car price
 
   - intent: stop
     examples: |
@@ -340,7 +390,7 @@ nlu:
       - \b\d{4,6}\b(?=\s*(km|kilometers)\b)
   - regex: mileage
     examples: |
-      - \b\d{1,2}\b(?=\s*(km\/l|km per liter)\b)
+      - \b\d{1,2}\b(?=\s*(kmpl|km\/l|km per liter)\b)
   - regex: engine
     examples: |
       - \b(\d{3,4})\s?cc\b
@@ -353,6 +403,7 @@ nlu:
   - regex: year_of_manufacture
     examples: |
       - \b(19[0-9]{2}|20[0-2][0-3])\b\s*year\b
+
 
   - lookup: brand
     examples: |

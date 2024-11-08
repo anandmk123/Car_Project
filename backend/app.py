@@ -15,25 +15,33 @@ def predict_price(data):
     return predicted_price
 
 def get_max_contribution(data):
+    # Convert input data to DataFrame with specified order
     input_data = pd.DataFrame([data])
     
-    # Transform input data
+    # Transform input data using the preprocessor in loaded pipeline
     input_transformed = loaded_pipeline.named_steps['preprocessor'].transform(input_data)
     
-    # Create SHAP explainer and get SHAP values
+    # Create SHAP explainer for the model in the loaded pipeline and get SHAP values
     explainer = shap.Explainer(loaded_pipeline.named_steps['model'])
     shap_values = explainer(input_transformed)
-
-    # Convert SHAP values to DataFrame
-    shap_values_df = pd.DataFrame(shap_values.values, columns=loaded_pipeline.named_steps['preprocessor'].get_feature_names_out())
-
-    # Get the highest contributing attribute
-    max_contribution_feature = shap_values_df.abs().max().idxmax()
-    max_contribution_value = shap_values_df[max_contribution_feature].values[0]
-    predicted_price = predict_price(data)
-    percentage_contribution = (max_contribution_value / predicted_price) * 100
     
+    # Convert SHAP values to DataFrame for easy breakdown
+    shap_values_df = pd.DataFrame(shap_values.values, columns=loaded_pipeline.named_steps['preprocessor'].get_feature_names_out())
+    # Find the feature with the maximum contribution
+    max_contribution_feature = shap_values_df.iloc[0].idxmax()
+    max_contribution_value = shap_values_df.iloc[0].max()
+
+    # Predict the price using the model
+    predicted_price = loaded_pipeline.named_steps['model'].predict(input_transformed)[0]
+    # print(predicted_price)
+    # print(max_contribution_feature)
+    # print(max_contribution_value)
+    
+    # Calculate the percentage contribution of the max feature
+    percentage_contribution = (max_contribution_value / predicted_price) * 100 if predicted_price != 0 else 0
+
     return max_contribution_feature, percentage_contribution
+
 
 @app.route('/predict_price', methods=['GET'])
 def price_prediction():

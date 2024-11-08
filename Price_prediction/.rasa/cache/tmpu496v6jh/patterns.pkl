@@ -1,0 +1,42 @@
+[
+  {
+    "name": "engine",
+    "pattern": "\\b(\\d{3,4})\\s?cc\\b"
+  },
+  {
+    "name": "km_driven",
+    "pattern": "\\b\\d{4,6}(?=\\s*(?:km|kilometers)\\b)"
+  },
+  {
+    "name": "max_power",
+    "pattern": "\\b\\d{2,3}\\s*(bhp)\\b"
+  },
+  {
+    "name": "mileage",
+    "pattern": "\\b\\d{1,2}\\b(?=\\s*(km\\/l|km per liter|kmpl)\\b)"
+  },
+  {
+    "name": "seats",
+    "pattern": "\\b[1-9]\\s*seats\\b"
+  },
+  {
+    "name": "year_of_manufacture",
+    "pattern": "\\b(19[0-9]{2}|20[0-2][0-3])\\b\\s*year\\b"
+  },
+  {
+    "name": "brand",
+    "pattern": "(\\bMaruti\\b|\\bHyundai\\b|\\bFord\\b|\\bRenault\\b|\\bMini\\b|\\bMercedes\\-Benz\\b|\\bToyota\\b|\\bVolkswagen\\b|\\bHonda\\b|\\bMahindra\\b|\\bDatsun\\b|\\bTata\\b|\\bKia\\b|\\bBMW\\b|\\bAudi\\b|\\bLand\\ Rover\\b|\\bJaguar\\b|\\bMG\\b|\\bIsuzu\\b|\\bPorsche\\b|\\bSkoda\\b|\\bVolvo\\b|\\bLexus\\b|\\bJeep\\b|\\bMaserati\\b|\\bBentley\\b|\\bNissan\\b|\\bISUZU\\b|\\bFerrari\\b|\\bMercedes\\-AMG\\b|\\bRolls\\-Royce\\b|\\bForce\\b)"
+  },
+  {
+    "name": "model",
+    "pattern": "(\\bAlto\\b|\\bGrand\\b|\\bi20\\b|\\bEcosport\\b|\\bWagon\\ R\\b|\\bi10\\b|\\bVenue\\b|\\bSwift\\b|\\bVerna\\b|\\bDuster\\b|\\bCooper\\b|\\bCiaz\\b|\\bC\\-Class\\b|\\bInnova\\b|\\bBaleno\\b|\\bSwift\\ Dzire\\b|\\bVento\\b|\\bCreta\\b|\\bCity\\b|\\bBolero\\b|\\bFortuner\\b|\\bKWID\\b|\\bAmaze\\b|\\bSantro\\b|\\bXUV500\\b|\\bKUV100\\b|\\bIgnis\\b|\\bRediGO\\b|\\bScorpio\\b|\\bMarazzo\\b|\\bAspire\\b|\\bFigo\\b|\\bVitara\\b|\\bTiago\\b|\\bPolo\\b|\\bSeltos\\b|\\bCelerio\\b|\\bGO\\b|\\bCR\\-V\\b|\\bEndeavour\\b|\\bKUV\\b|\\bJazz\\b|\\bA4\\b|\\bTigor\\b|\\bErtiga\\b|\\bSafari\\b|\\bThar\\b|\\bHexa\\b|\\bRover\\b|\\bEeco\\b|\\bA6\\b|\\bE\\-Class\\b|\\bQ7\\b|\\bZ4\\b|\\bXF\\b|\\bX5\\b|\\bHector\\b|\\bCivic\\b|\\bD\\-Max\\b|\\bCayenne\\b|\\bX1\\b|\\bRapid\\b|\\bFreestyle\\b|\\bSuperb\\b|\\bNexon\\b|\\bXUV300\\b|\\bDzire\\ VXI\\b|\\bS90\\b|\\bWR\\-V\\b|\\bXL6\\b|\\bTriber\\b|\\bES\\b|\\bWrangler\\b|\\bCamry\\b|\\bElantra\\b|\\bYaris\\b|\\bGL\\-Class\\b|\\bS\\-Presso\\b|\\bDzire\\ LXI\\b|\\bAura\\b|\\bXC\\b|\\bGhibli\\b|\\bContinental\\b|\\bCR\\b|\\bKicks\\b|\\bS\\-Class\\b|\\bTucson\\b|\\bHarrier\\b|\\bX3\\b|\\bOctavia\\b|\\bCompass\\b|\\bCLS\\b|\\bredi\\-GO\\b|\\bGlanza\\b|\\bMacan\\b|\\bX4\\b|\\bDzire\\ ZXI\\b|\\bXC90\\b|\\bF\\-PACE\\b|\\bA8\\b|\\bMUX\\b|\\bGTC4Lusso\\b|\\bGLS\\b|\\bX\\-Trail\\b|\\bXE\\b|\\bXC60\\b|\\bPanamera\\b|\\bAlturas\\b|\\bAltroz\\b|\\bNX\\b|\\bCarnival\\b|\\bC\\b|\\bRX\\b|\\bGhost\\b|\\bQuattroporte\\b|\\bGurkha\\b)"
+  },
+  {
+    "name": "transmission_type",
+    "pattern": "(\\bmanual\\b|\\bautomatic\\b)"
+  },
+  {
+    "name": "fuel_type",
+    "pattern": "(\\bpetrol\\b|\\bdiesel\\b|\\belectric\\b)"
+  }
+]

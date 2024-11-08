@@ -6,7 +6,6 @@ intents:
   - goodbye
   - greet
   - inform
-  - predict_car_price
   - stop
   - ask_shap
 actions:
