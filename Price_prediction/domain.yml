@@ -1,4 +1,5 @@
 version: "3.1"
+
 intents:
   - affirm
   - bot_challenge
@@ -8,6 +9,11 @@ intents:
   - inform
   - stop
   - ask_shap
+  - ask_mileage
+  - ask_value_calculation
+  - ask_engine_capacity
+  - ask_maximum_power
+
 actions:
   - utter_slots_values
   - utter_greet
@@ -166,7 +172,15 @@ responses:
   utter_please_rephrase:
     - text: Hmm, I didn’t quite catch that. Could you rephrase it for me?
   utter_default:
-    - text: Oops, I missed that! Could you say it another way? 😊
+    - text: Oops, I missed that! Could you say it another way? Or type 'Hi' to restart. 😊
+  utter_mileage_info:
+    - text: "Mileage refers to how far a vehicle can travel on a unit of fuel, often measured in miles per gallon (mpg) or kilometers per liter (km/l). Factors like engine size, driving habits, and maintenance can affect it."
+  utter_value_calculation_info:
+    - text: "A car's value is calculated based on factors such as its age, mileage, condition, make, model, market demand, and features. For example, lower mileage and well-maintained vehicles typically retain more value."
+  utter_engine_capacity_info:
+    - text: "Engine capacity is the measure of the engine's displacement in cubic centimeters (cc)."
+  utter_maximum_power_info:
+    - text: "Maximum power refers to the highest power output of the engine, typically measured in horsepower (HP) or kilowatts (kW)."
 
 session_config:
   session_expiration_time: 60

@@ -22,6 +22,8 @@ rules:
       - action: utter_greet
 
   - rule: Activate car details form
+    condition:
+      - active_loop: null
     steps:
       - intent: inform
       - action: car_details_form
@@ -136,4 +138,83 @@ rules:
     steps:
       - intent: ask_shap
       - action: action_max_contribution # Custom action to fetch and respond with the max contributing feature
+
+# Handling general questions
+
+  - rule: Respond to Mileage Query
+    condition:
+      - active_loop: null
+    steps:
+      - intent: ask_mileage # Intent for asking about mileage
+      - action: utter_mileage_info
+
+  - rule: Respond to Value Calculation Query
+    condition:
+      - active_loop: null
+    steps:
+      - intent: ask_value_calculation # Intent for asking about value calculation
+      - action: utter_value_calculation_info
+
+  - rule: Handle General Queries While Form is Active
+    condition:
+      - active_loop: car_details_form # Check if the car details form is active
+    steps:
+      - intent: ask_mileage
+      - action: utter_mileage_info
+      # Return to form after answering the question
+      - action: car_details_form
+      - active_loop: car_details_form
+
+  - rule: Handle Value Calculation Query While Form is Active
+    condition:
+      - active_loop: car_details_form # Check if the car details form is active
+    steps:
+      - intent: ask_value_calculation
+      - action: utter_value_calculation_info
+      # Return to form after answering the question
+      - action: car_details_form
+      - active_loop: car_details_form
+
+  - rule: Respond to Engine Capacity Query
+    condition:
+      - active_loop: null
+    steps:
+      - intent: ask_engine_capacity # Intent for asking about engine capacity
+      - action: utter_engine_capacity_info
+
+  - rule: Handle Engine Capacity Query While Form is Active
+    condition:
+      - active_loop: car_details_form # Check if the car details form is active
+    steps:
+      - intent: ask_engine_capacity
+      - action: utter_engine_capacity_info
+      # Return to form after answering the question
+      - action: car_details_form
+      - active_loop: car_details_form 
+
+  - rule: Respond to Maximum Power Query
+    condition:
+      - active_loop: null
+    steps:
+      - intent: ask_maximum_power # Intent for asking about maximum power
+      - action: utter_maximum_power_info
+
+  - rule: Handle Maximum Power Query While Form is Active
+    condition:
+      - active_loop: car_details_form # Check if the car details form is active
+    steps:
+      - intent: ask_maximum_power
+      - action: utter_maximum_power_info
+      # Return to form after answering the question
+      - action: car_details_form
+      - active_loop: car_details_form
+
+
+  - rule: Bye during during normal flow
+    condition:
+      - active_loop: car_details_form # Check if the car details form is active
+    steps:
+      - intent: inform
+      - action: car_details_form
+      - active_loop: car_details_form
 

@@ -28,7 +28,6 @@ nlu:
       - see you around
       - bye bye
       - see you later
-      - ok
 
   - intent: affirm
     examples: |
@@ -38,6 +37,7 @@ nlu:
       - of course
       - that sounds good
       - correct
+      - ok
 
   - intent: deny
     examples: |
@@ -346,6 +346,12 @@ nlu:
       - predcit my car price
       - predict_car_pris
       - need to know my car price
+      - what is the price?
+      - how much does it cost?
+      - can you tell me the price?
+      - what's the car's value?
+      - what will this car sell for?
+      - how much is this car worth?
 
   - intent: stop
     examples: |
@@ -368,22 +374,55 @@ nlu:
       - which feature affects the price the most?
       - what contributes the most to the price?
       - which car feature has the highest impact?
-      - tell me the most significant factor in pricing
       - what feature is most important for price prediction?
       - which attribute affects the price the most?
-      - what influences the price the most?
-      - what are the top contributing features?
-      - show me the features that impact the price
-      - can you tell me which feature has the most weight?
       - what's the most influential factor in determining the price?
-      - how do the car features affect the price?
-      - which attributes should I focus on for pricing?
-      - which aspects drive the car's price?
-      - what matters most in car pricing?
-      - what are the key features affecting the price?
-      - help me understand the pricing factors.
-      - what contributes most to the car's value?
-      - which car specs should I consider for pricing?
+      - what is the key feature affecting the price?
+
+  - intent: ask_mileage
+    examples: |
+      - What is mileage?
+      - Can you explain mileage?
+      - How is mileage measured?
+      - What affects a car's mileage?
+      - What is a good mileage for a car?
+      - How is fuel efficiency related to mileage?
+
+  - intent: ask_value_calculation
+    examples: |
+      - How is the value of a car calculated?
+      - What factors determine a car's price?
+      - Can you explain how car pricing works?
+      - What affects the resale value of a car?
+      - What goes into calculating a car's value?
+      - Does the brand of a car influence its value?
+      - How do market trends affect car valuation?
+
+  - intent: ask_engine_capacity
+    examples: |
+      - What is engine capacity?
+      - Tell me about the engine capacity.
+      - Can you explain engine capacity?
+      - What does engine capacity mean?
+      - How is engine capacity measured?
+      - What is the displacement of the engine?
+      - Explain what engine displacement is.
+      - How many cc is the engine?
+      - What is the engine size in cc?
+      - Define engine capacity.
+
+  - intent: ask_maximum_power
+    examples: |
+      - What is maximum power?
+      - Tell me about the maximum power of the car.
+      - Can you explain maximum power?
+      - How is maximum power measured?
+      - What does maximum power mean?
+      - What is the horsepower of the car?
+      - How much power does the car engine produce?
+      - Explain maximum engine power.
+      - What is the highest power output of the engine?
+      - What is the car's power rating?
 
   - regex: km_driven
     examples: |

@@ -5,7 +5,7 @@ import shap
 
 app = Flask(__name__)
 
-# Load the complete pipeline from Google Drive
+# Load the complete pipeline 
 model_path = 'best_car_price_model.pkl'
 loaded_pipeline = joblib.load(model_path)
 
@@ -27,6 +27,7 @@ def get_max_contribution(data):
     
     # Convert SHAP values to DataFrame for easy breakdown
     shap_values_df = pd.DataFrame(shap_values.values, columns=loaded_pipeline.named_steps['preprocessor'].get_feature_names_out())
+    # print(shap_values_df)
     # Find the feature with the maximum contribution
     max_contribution_feature = shap_values_df.iloc[0].idxmax()
     max_contribution_value = shap_values_df.iloc[0].max()
