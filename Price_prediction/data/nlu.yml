@@ -426,7 +426,7 @@ nlu:
 
   - regex: km_driven
     examples: |
-      - \b\d{4,6}\b(?=\s*(km|kilometers)\b)
+      - \b\d{2,6}\b(?=\s*(km|kilometers)\b)
   - regex: mileage
     examples: |
       - \b\d{1,2}\b(?=\s*(kmpl|km\/l|km per liter)\b)
@@ -441,7 +441,7 @@ nlu:
       - \b[1-9]\s*seats\b
   - regex: year_of_manufacture
     examples: |
-      - \b(19[0-9]{2}|20[0-2][0-3])\b\s*year\b
+      - \b(19[0-9]{2}|20[0-2][0-4])\b\s*year\b
 
 
   - lookup: brand

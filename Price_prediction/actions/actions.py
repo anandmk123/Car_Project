@@ -347,7 +347,7 @@ class ActionPredictCarPrice(Action):
 
             # Extract price from the response
             price_data = response.json()  # Assuming the API returns JSON
-            price = price_data.get('predicted_price', 'Not available')  # Adjust key as necessary
+            price = price_data.get('predicted_price', 'Not available') 
 
             # Send the price back to the user
             dispatcher.utter_message(text=f"The predicted price of the car is: {price:.2f}")
